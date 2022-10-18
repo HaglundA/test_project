@@ -9,9 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Alexander Haglund" />
 
+<meta name="date" content="2022-10-18" />
 
-<title>test_markdown</title>
+<title>first-analysis</title>
 
 <script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -357,7 +359,9 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">test_markdown</h1>
+<h1 class="title toc-ignore">first-analysis</h1>
+<h4 class="author">Alexander Haglund</h4>
+<h4 class="date">2022-10-18</h4>
 
 </div>
 
@@ -502,7 +506,7 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <div id="versions" class="tab-pane fade">
 
 <p>
-These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/test.Rmd</code>) and HTML (<code>docs/test.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
+These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/first-analysis.Rmd</code>) and HTML (<code>docs/first-analysis.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -528,27 +532,10 @@ Message
 <tbody>
 <tr>
 <td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/ah3918/test_project/3fd24e1cd9e381449eb3da95441030e05f1b410f/docs/test.html" target="_blank">3fd24e1</a>
-</td>
-<td>
-Alexander Haglund
-</td>
-<td>
-2022-10-18
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
 Rmd
 </td>
 <td>
-<a href="https://github.com/ah3918/test_project/blob/bf95a3c977ed4be4b7960eaecd57ffc56573b10a/analysis/test.Rmd" target="_blank">bf95a3c</a>
+<a href="https://github.com/ah3918/test_project/blob/394dc3564d935a092459019ae3a391990b2a1506/analysis/first-analysis.Rmd" target="_blank">394dc35</a>
 </td>
 <td>
 Alexander Haglund
@@ -557,58 +544,7 @@ Alexander Haglund
 2022-10-18
 </td>
 <td>
-wflow_publish(c("analysis/index.Rmd", "analysis/test.Rmd"))
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/ah3918/test_project/6ea9f3909d81a3989467b3f7b786d478f0e5bd03/docs/test.html" target="_blank">6ea9f39</a>
-</td>
-<td>
-Alexander Haglund
-</td>
-<td>
-2022-10-18
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/ah3918/test_project/3e5a8e6340d1ce68fc1da0370b607664fdd3d1bf/docs/test.html" target="_blank">3e5a8e6</a>
-</td>
-<td>
-Alexander Haglund
-</td>
-<td>
-2022-10-18
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/ah3918/test_project/blob/fefe3a1e6332e6e062fd6c3bcd2cadcf107b6d4c/analysis/test.Rmd" target="_blank">fefe3a1</a>
-</td>
-<td>
-Alexander Haglund
-</td>
-<td>
-2022-10-18
-</td>
-<td>
-wflow_publish(c("analysis/test.Rmd"))
+wflow_publish(c("analysis/index.Rmd", "analysis/test.Rmd", "analysis/first-analysis.Rmd"))
 </td>
 </tr>
 </tbody>
@@ -618,62 +554,20 @@ wflow_publish(c("analysis/test.Rmd"))
 </div>
 </div>
 </div>
-<div id="r-markdown" class="section level2">
-<h2>R Markdown</h2>
-<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
-<pre class="r"><code>summary(cars)</code></pre>
-<pre><code>     speed           dist       
- Min.   : 4.0   Min.   :  2.00  
- 1st Qu.:12.0   1st Qu.: 26.00  
- Median :15.0   Median : 36.00  
- Mean   :15.4   Mean   : 42.98  
- 3rd Qu.:19.0   3rd Qu.: 56.00  
- Max.   :25.0   Max.   :120.00  </code></pre>
-</div>
-<div id="including-plots" class="section level2">
-<h2>Including Plots</h2>
-<p>You can also embed plots, for example:</p>
-<p><img src="figure/test.Rmd/pressure-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-pressure-1">
-Past versions of pressure-1.png
-</button>
-</p>
-<div id="fig-pressure-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/ah3918/test_project/blob/3e5a8e6340d1ce68fc1da0370b607664fdd3d1bf/docs/figure/test.Rmd/pressure-1.png" target="_blank">3e5a8e6</a>
-</td>
-<td>
-Alexander Haglund
-</td>
-<td>
-2022-10-18
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<pre><code>[1] 2</code></pre>
-<p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<pre class="r"><code>Name &lt;- c(&quot;Jon&quot;, &quot;Bill&quot;, &quot;Maria&quot;, &quot;Ben&quot;, &quot;Tina&quot;)
+Age &lt;- c(23, 41, 32, 58, 26)
+
+df &lt;- data.frame(Name, Age)
+
+print (df)</code></pre>
+<pre><code>   Name Age
+1   Jon  23
+2  Bill  41
+3 Maria  32
+4   Ben  58
+5  Tina  26</code></pre>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -704,17 +598,17 @@ other attached packages:
 [1] workflowr_1.7.0
 
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.9       highr_0.9        compiler_4.1.1   pillar_1.8.0    
- [5] bslib_0.3.1      later_1.2.0      git2r_0.29.0     jquerylib_0.1.4 
- [9] tools_4.1.1      getPass_0.2-2    digest_0.6.29    jsonlite_1.7.2  
-[13] evaluate_0.14    tibble_3.1.8     lifecycle_1.0.1  pkgconfig_2.0.3 
-[17] rlang_1.0.4      cli_3.3.0        rstudioapi_0.13  yaml_2.2.1      
-[21] xfun_0.33        fastmap_1.1.0    httr_1.4.2       stringr_1.4.0   
-[25] knitr_1.35       fs_1.5.1         vctrs_0.4.1      sass_0.4.0      
-[29] rprojroot_2.0.2  glue_1.6.2       R6_2.5.1         processx_3.5.2  
-[33] fansi_1.0.3      rmarkdown_2.17   callr_3.7.0      magrittr_2.0.3  
-[37] whisker_0.4      ps_1.6.0         promises_1.2.0.1 htmltools_0.5.2 
-[41] httpuv_1.6.3     utf8_1.2.2       stringi_1.7.6   </code></pre>
+ [1] Rcpp_1.0.9       compiler_4.1.1   pillar_1.8.0     bslib_0.3.1     
+ [5] later_1.2.0      git2r_0.29.0     jquerylib_0.1.4  tools_4.1.1     
+ [9] getPass_0.2-2    digest_0.6.29    jsonlite_1.7.2   evaluate_0.14   
+[13] tibble_3.1.8     lifecycle_1.0.1  pkgconfig_2.0.3  rlang_1.0.4     
+[17] cli_3.3.0        rstudioapi_0.13  yaml_2.2.1       xfun_0.33       
+[21] fastmap_1.1.0    httr_1.4.2       stringr_1.4.0    knitr_1.35      
+[25] fs_1.5.1         vctrs_0.4.1      sass_0.4.0       rprojroot_2.0.2 
+[29] glue_1.6.2       R6_2.5.1         processx_3.5.2   fansi_1.0.3     
+[33] rmarkdown_2.17   callr_3.7.0      magrittr_2.0.3   whisker_0.4     
+[37] ps_1.6.0         promises_1.2.0.1 htmltools_0.5.2  httpuv_1.6.3    
+[41] utf8_1.2.2       stringi_1.7.6   </code></pre>
 </div>
 </div>
 
