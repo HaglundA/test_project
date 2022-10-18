@@ -1,0 +1,41 @@
+---
+title: "eQTL_analysis"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+Load functions:
+```{r cars}
+library(SCGsuite)
+```
+
+## Including Plots
+Run pipeline:
+```{r pressure, echo=FALSE}
+cellQTL(outputdir = "/rds/general/user/ah3918/projects/single_cell_eqtl/live/MRC/EQTL_PIPELINE_RUNS/OCT/",
+        input_seurat="/rds/general/user/ah3918/projects/single_cell_eqtl/live/MRC/SEURAT/FINAL_SEURATOBJS/Final_Seurat_129samples_15May2022.rds",
+        gds_inputfile="/rds/general/user/ah3918/projects/single_cell_eqtl/live/MRC/GENOTYPE/merge_test_seqArray.gds",
+        Step1 = FALSE,
+        min.cells=20,
+        Step2 = FALSE,
+        run_id = "test", 
+        covadj_matrixeqtl=TRUE, 
+        cov_file="/rds/general/user/ah3918/projects/single_cell_eqtl/live/MRC/meqtl_files/MASTER_COVS_13JAN22.txt",
+        covs=c("Age","PMI","Sex","Sample_Source"),
+        covadj_pc_matrixeqtl = TRUE,
+        covadj_pcs_n_matrixeqtl=40,
+        geno_mat_file="genotype_012mat.csv",
+        geno_loc_file="snp_chromlocations.csv",
+        pval_thresh_cis=5e-4)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

@@ -10,3 +10,6 @@ editor_options:
 
 Welcome to my research website.
 Click on this [link](test.html) to see my results
+
+eQTL analysis; [link](eQTL_analysis.htmlwflow_publish(c("analysis/index.Rmd","analysis/test.Rmd"))
+)
