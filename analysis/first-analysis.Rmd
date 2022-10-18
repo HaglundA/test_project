@@ -1,0 +1,20 @@
+---
+title: "first-analysis"
+author: "Alexander Haglund"
+date: "2022-10-18"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+## Introduction
+
+```{r}
+Name <- c("Jon", "Bill", "Maria", "Ben", "Tina")
+Age <- c(23, 41, 32, 58, 26)
+
+df <- data.frame(Name, Age)
+
+print (df)
+```
+
