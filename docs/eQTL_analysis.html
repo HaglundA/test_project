@@ -11,7 +11,7 @@
 
 
 
-<title>test_markdown</title>
+<title>eQTL_analysis</title>
 
 <script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -357,7 +357,7 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">test_markdown</h1>
+<h1 class="title toc-ignore">eQTL_analysis</h1>
 
 </div>
 
@@ -504,7 +504,7 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <div id="versions" class="tab-pane fade">
 
 <p>
-These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/test.Rmd</code>) and HTML (<code>docs/test.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
+These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/eQTL_analysis.rmd</code>) and HTML (<code>docs/eQTL_analysis.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -530,44 +530,10 @@ Message
 <tbody>
 <tr>
 <td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/ah3918/test_project/d90de918da9a9a91ab66865b45d1d17e3f435aa7/docs/test.html" target="_blank">d90de91</a>
-</td>
-<td>
-Alexander Haglund
-</td>
-<td>
-2022-10-18
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/ah3918/test_project/3fd24e1cd9e381449eb3da95441030e05f1b410f/docs/test.html" target="_blank">3fd24e1</a>
-</td>
-<td>
-Alexander Haglund
-</td>
-<td>
-2022-10-18
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
 Rmd
 </td>
 <td>
-<a href="https://github.com/ah3918/test_project/blob/bf95a3c977ed4be4b7960eaecd57ffc56573b10a/analysis/test.Rmd" target="_blank">bf95a3c</a>
+<a href="https://github.com/ah3918/test_project/blob/14003e628afec5c8868c8e3e28f12c02ce260473/analysis/eQTL_analysis.rmd" target="_blank">14003e6</a>
 </td>
 <td>
 Alexander Haglund
@@ -576,58 +542,7 @@ Alexander Haglund
 2022-10-18
 </td>
 <td>
-wflow_publish(c("analysis/index.Rmd", "analysis/test.Rmd"))
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/ah3918/test_project/6ea9f3909d81a3989467b3f7b786d478f0e5bd03/docs/test.html" target="_blank">6ea9f39</a>
-</td>
-<td>
-Alexander Haglund
-</td>
-<td>
-2022-10-18
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/ah3918/test_project/3e5a8e6340d1ce68fc1da0370b607664fdd3d1bf/docs/test.html" target="_blank">3e5a8e6</a>
-</td>
-<td>
-Alexander Haglund
-</td>
-<td>
-2022-10-18
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/ah3918/test_project/blob/fefe3a1e6332e6e062fd6c3bcd2cadcf107b6d4c/analysis/test.Rmd" target="_blank">fefe3a1</a>
-</td>
-<td>
-Alexander Haglund
-</td>
-<td>
-2022-10-18
-</td>
-<td>
-wflow_publish(c("analysis/test.Rmd"))
+wflow_publish(c("analysis/index.Rmd", "analysis/test.Rmd", "analysis/eQTL_analysis.rmd"))
 </td>
 </tr>
 </tbody>
@@ -641,57 +556,219 @@ wflow_publish(c("analysis/test.Rmd"))
 <h2>R Markdown</h2>
 <p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
 <p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
-<pre class="r"><code>summary(cars)</code></pre>
-<pre><code>     speed           dist       
- Min.   : 4.0   Min.   :  2.00  
- 1st Qu.:12.0   1st Qu.: 26.00  
- Median :15.0   Median : 36.00  
- Mean   :15.4   Mean   : 42.98  
- 3rd Qu.:19.0   3rd Qu.: 56.00  
- Max.   :25.0   Max.   :120.00  </code></pre>
+<p>Load functions:</p>
+<pre class="r"><code>library(SCGsuite)</code></pre>
 </div>
 <div id="including-plots" class="section level2">
 <h2>Including Plots</h2>
-<p>You can also embed plots, for example:</p>
-<p><img src="figure/test.Rmd/pressure-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-pressure-1">
-Past versions of pressure-1.png
-</button>
-</p>
-<div id="fig-pressure-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/ah3918/test_project/blob/3e5a8e6340d1ce68fc1da0370b607664fdd3d1bf/docs/figure/test.Rmd/pressure-1.png" target="_blank">3e5a8e6</a>
-</td>
-<td>
-Alexander Haglund
-</td>
-<td>
-2022-10-18
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<pre><code>[1] 2</code></pre>
+<p>Run pipeline:</p>
+<pre><code>Starting pipeline run. Parameters used:
+ covadj_matrixeqtl=TRUE
+ covs= Age PMI Sex Sample_Source
+ filter genotype matrix=FALSE
+ filter genotype matrix threshold=2.2
+ filter_pseudobulk=TRUE
+ filter_pseudobulk_thresh=3
+ specify_genes=FALSE
+ specify_celltypes=FALSEStarting pipeline run. Parameters used:
+ covadj_matrixeqtl=TRUE
+ covs= Age PMI Sex Sample_Source
+ filter genotype matrix=FALSE
+ filter genotype matrix threshold=2.3
+ filter_pseudobulk=TRUE
+ filter_pseudobulk_thresh=3
+ specify_genes=FALSE
+ specify_celltypes=FALSE</code></pre>
+<pre><code>Step 1 skipped. Using pre-computed pseudobulk matrices</code></pre>
+<pre><code>Step 2 skipped. Using pre-computed genotype matrix</code></pre>
+<pre><code>Step 3: Calculating MatrixEQTL and TreeQTL..</code></pre>
+<pre><code>Making sure geno_loc and geno_mat match..</code></pre>
+<pre><code>filter_pseudobulk=TRUE. Keeping genes with minimum 3 individuals.</code></pre>
+<pre><code>Ordering column names for Astro_agg_cpm</code></pre>
+<pre><code>Performing MatrixEQTL analysis for 56..</code></pre>
+<pre><code>17750 of 17750 genes matched</code></pre>
+<pre><code>300104 of 300104 SNPs matched</code></pre>
+<pre><code> 5.55% done, 91 cis-eQTLs</code></pre>
+<pre><code>11.11% done, 155 cis-eQTLs</code></pre>
+<pre><code>16.66% done, 287 cis-eQTLs</code></pre>
+<pre><code>22.22% done, 365 cis-eQTLs</code></pre>
+<pre><code>27.77% done, 504 cis-eQTLs</code></pre>
+<pre><code>33.33% done, 581 cis-eQTLs</code></pre>
+<pre><code>38.88% done, 723 cis-eQTLs</code></pre>
+<pre><code>44.44% done, 940 cis-eQTLs</code></pre>
+<pre><code>50.00% done, 1,065 cis-eQTLs</code></pre>
+<pre><code>55.55% done, 1,147 cis-eQTLs</code></pre>
+<pre><code>61.11% done, 1,243 cis-eQTLs</code></pre>
+<pre><code>66.66% done, 1,350 cis-eQTLs</code></pre>
+<pre><code>72.22% done, 1,405 cis-eQTLs</code></pre>
+<pre><code>77.77% done, 1,466 cis-eQTLs</code></pre>
+<pre><code>83.33% done, 1,692 cis-eQTLs</code></pre>
+<pre><code>88.88% done, 1,821 cis-eQTLs</code></pre>
+<pre><code>94.44% done, 2,072 cis-eQTLs</code></pre>
+<pre><code>100.00% done, 2,074 cis-eQTLs</code></pre>
+<pre><code>MatrixEQTL calculated for Astro_agg_cpm.</code></pre>
+<pre><code>Ordering column names for Endo_agg_cpm</code></pre>
+<pre><code>Performing MatrixEQTL analysis for 54..</code></pre>
+<pre><code>16900 of 16900 genes matched</code></pre>
+<pre><code>300104 of 300104 SNPs matched</code></pre>
+<pre><code> 5.88% done, 84 cis-eQTLs</code></pre>
+<pre><code>11.76% done, 190 cis-eQTLs</code></pre>
+<pre><code>17.64% done, 264 cis-eQTLs</code></pre>
+<pre><code>23.52% done, 350 cis-eQTLs</code></pre>
+<pre><code>29.41% done, 439 cis-eQTLs</code></pre>
+<pre><code>35.29% done, 512 cis-eQTLs</code></pre>
+<pre><code>41.17% done, 588 cis-eQTLs</code></pre>
+<pre><code>47.05% done, 821 cis-eQTLs</code></pre>
+<pre><code>52.94% done, 962 cis-eQTLs</code></pre>
+<pre><code>58.82% done, 1,069 cis-eQTLs</code></pre>
+<pre><code>64.70% done, 1,152 cis-eQTLs</code></pre>
+<pre><code>70.58% done, 1,245 cis-eQTLs</code></pre>
+<pre><code>76.47% done, 1,336 cis-eQTLs</code></pre>
+<pre><code>82.35% done, 1,515 cis-eQTLs</code></pre>
+<pre><code>88.23% done, 1,703 cis-eQTLs</code></pre>
+<pre><code>94.11% done, 1,849 cis-eQTLs</code></pre>
+<pre><code>100.00% done, 1,887 cis-eQTLs</code></pre>
+<pre><code>MatrixEQTL calculated for Endo_agg_cpm.</code></pre>
+<pre><code>Ordering column names for Excitatory_agg_cpm</code></pre>
+<pre><code>Performing MatrixEQTL analysis for 56..</code></pre>
+<pre><code>18417 of 18417 genes matched</code></pre>
+<pre><code>300104 of 300104 SNPs matched</code></pre>
+<pre><code> 5.26% done, 92 cis-eQTLs</code></pre>
+<pre><code>10.52% done, 210 cis-eQTLs</code></pre>
+<pre><code>15.78% done, 264 cis-eQTLs</code></pre>
+<pre><code>21.05% done, 354 cis-eQTLs</code></pre>
+<pre><code>26.31% done, 436 cis-eQTLs</code></pre>
+<pre><code>31.57% done, 506 cis-eQTLs</code></pre>
+<pre><code>36.84% done, 621 cis-eQTLs</code></pre>
+<pre><code>42.10% done, 710 cis-eQTLs</code></pre>
+<pre><code>47.36% done, 952 cis-eQTLs</code></pre>
+<pre><code>52.63% done, 1,028 cis-eQTLs</code></pre>
+<pre><code>57.89% done, 1,099 cis-eQTLs</code></pre>
+<pre><code>63.15% done, 1,189 cis-eQTLs</code></pre>
+<pre><code>68.42% done, 1,245 cis-eQTLs</code></pre>
+<pre><code>73.68% done, 1,354 cis-eQTLs</code></pre>
+<pre><code>78.94% done, 1,566 cis-eQTLs</code></pre>
+<pre><code>84.21% done, 1,775 cis-eQTLs</code></pre>
+<pre><code>89.47% done, 1,924 cis-eQTLs</code></pre>
+<pre><code>94.73% done, 1,963 cis-eQTLs</code></pre>
+<pre><code>MatrixEQTL calculated for Excitatory_agg_cpm.</code></pre>
+<pre><code>Ordering column names for Inhibitory_agg_cpm</code></pre>
+<pre><code>Performing MatrixEQTL analysis for 56..</code></pre>
+<pre><code>17998 of 17998 genes matched</code></pre>
+<pre><code>300104 of 300104 SNPs matched</code></pre>
+<pre><code> 5.55% done, 62 cis-eQTLs</code></pre>
+<pre><code>11.11% done, 135 cis-eQTLs</code></pre>
+<pre><code>16.66% done, 205 cis-eQTLs</code></pre>
+<pre><code>22.22% done, 318 cis-eQTLs</code></pre>
+<pre><code>27.77% done, 454 cis-eQTLs</code></pre>
+<pre><code>33.33% done, 538 cis-eQTLs</code></pre>
+<pre><code>38.88% done, 609 cis-eQTLs</code></pre>
+<pre><code>44.44% done, 784 cis-eQTLs</code></pre>
+<pre><code>50.00% done, 916 cis-eQTLs</code></pre>
+<pre><code>55.55% done, 1,113 cis-eQTLs</code></pre>
+<pre><code>61.11% done, 1,206 cis-eQTLs</code></pre>
+<pre><code>66.66% done, 1,311 cis-eQTLs</code></pre>
+<pre><code>72.22% done, 1,484 cis-eQTLs</code></pre>
+<pre><code>77.77% done, 1,543 cis-eQTLs</code></pre>
+<pre><code>83.33% done, 1,618 cis-eQTLs</code></pre>
+<pre><code>88.88% done, 1,755 cis-eQTLs</code></pre>
+<pre><code>94.44% done, 1,850 cis-eQTLs</code></pre>
+<pre><code>100.00% done, 1,873 cis-eQTLs</code></pre>
+<pre><code>MatrixEQTL calculated for Inhibitory_agg_cpm.</code></pre>
+<pre><code>Ordering column names for Microglia_agg_cpm</code></pre>
+<pre><code>Performing MatrixEQTL analysis for 55..</code></pre>
+<pre><code>17190 of 17190 genes matched</code></pre>
+<pre><code>300104 of 300104 SNPs matched</code></pre>
+<pre><code> 5.55% done, 93 cis-eQTLs</code></pre>
+<pre><code>11.11% done, 206 cis-eQTLs</code></pre>
+<pre><code>16.66% done, 293 cis-eQTLs</code></pre>
+<pre><code>22.22% done, 409 cis-eQTLs</code></pre>
+<pre><code>27.77% done, 532 cis-eQTLs</code></pre>
+<pre><code>33.33% done, 660 cis-eQTLs</code></pre>
+<pre><code>38.88% done, 792 cis-eQTLs</code></pre>
+<pre><code>44.44% done, 1,036 cis-eQTLs</code></pre>
+<pre><code>50.00% done, 1,146 cis-eQTLs</code></pre>
+<pre><code>55.55% done, 1,217 cis-eQTLs</code></pre>
+<pre><code>61.11% done, 1,307 cis-eQTLs</code></pre>
+<pre><code>66.66% done, 1,375 cis-eQTLs</code></pre>
+<pre><code>72.22% done, 1,454 cis-eQTLs</code></pre>
+<pre><code>77.77% done, 1,532 cis-eQTLs</code></pre>
+<pre><code>83.33% done, 1,708 cis-eQTLs</code></pre>
+<pre><code>88.88% done, 1,829 cis-eQTLs</code></pre>
+<pre><code>94.44% done, 1,886 cis-eQTLs</code></pre>
+<pre><code>MatrixEQTL calculated for Microglia_agg_cpm.</code></pre>
+<pre><code>Ordering column names for Oligo_agg_cpm</code></pre>
+<pre><code>Performing MatrixEQTL analysis for 54..</code></pre>
+<pre><code>17747 of 17747 genes matched</code></pre>
+<pre><code>300104 of 300104 SNPs matched</code></pre>
+<pre><code> 5.55% done, 67 cis-eQTLs</code></pre>
+<pre><code>11.11% done, 159 cis-eQTLs</code></pre>
+<pre><code>16.66% done, 205 cis-eQTLs</code></pre>
+<pre><code>22.22% done, 263 cis-eQTLs</code></pre>
+<pre><code>27.77% done, 366 cis-eQTLs</code></pre>
+<pre><code>33.33% done, 438 cis-eQTLs</code></pre>
+<pre><code>38.88% done, 527 cis-eQTLs</code></pre>
+<pre><code>44.44% done, 732 cis-eQTLs</code></pre>
+<pre><code>50.00% done, 840 cis-eQTLs</code></pre>
+<pre><code>55.55% done, 934 cis-eQTLs</code></pre>
+<pre><code>61.11% done, 1,015 cis-eQTLs</code></pre>
+<pre><code>66.66% done, 1,124 cis-eQTLs</code></pre>
+<pre><code>72.22% done, 1,222 cis-eQTLs</code></pre>
+<pre><code>77.77% done, 1,383 cis-eQTLs</code></pre>
+<pre><code>83.33% done, 1,802 cis-eQTLs</code></pre>
+<pre><code>88.88% done, 1,884 cis-eQTLs</code></pre>
+<pre><code>94.44% done, 1,967 cis-eQTLs</code></pre>
+<pre><code>100.00% done, 1,967 cis-eQTLs</code></pre>
+<pre><code>MatrixEQTL calculated for Oligo_agg_cpm.</code></pre>
+<pre><code>Ordering column names for OPC_agg_cpm</code></pre>
+<pre><code>Performing MatrixEQTL analysis for 56..</code></pre>
+<pre><code>17336 of 17336 genes matched</code></pre>
+<pre><code>300104 of 300104 SNPs matched</code></pre>
+<pre><code> 5.55% done, 98 cis-eQTLs</code></pre>
+<pre><code>11.11% done, 208 cis-eQTLs</code></pre>
+<pre><code>16.66% done, 311 cis-eQTLs</code></pre>
+<pre><code>22.22% done, 437 cis-eQTLs</code></pre>
+<pre><code>27.77% done, 541 cis-eQTLs</code></pre>
+<pre><code>33.33% done, 647 cis-eQTLs</code></pre>
+<pre><code>38.88% done, 765 cis-eQTLs</code></pre>
+<pre><code>44.44% done, 1,007 cis-eQTLs</code></pre>
+<pre><code>50.00% done, 1,090 cis-eQTLs</code></pre>
+<pre><code>55.55% done, 1,259 cis-eQTLs</code></pre>
+<pre><code>61.11% done, 1,370 cis-eQTLs</code></pre>
+<pre><code>66.66% done, 1,444 cis-eQTLs</code></pre>
+<pre><code>72.22% done, 1,536 cis-eQTLs</code></pre>
+<pre><code>77.77% done, 1,625 cis-eQTLs</code></pre>
+<pre><code>83.33% done, 1,834 cis-eQTLs</code></pre>
+<pre><code>88.88% done, 1,932 cis-eQTLs</code></pre>
+<pre><code>94.44% done, 1,987 cis-eQTLs</code></pre>
+<pre><code>MatrixEQTL calculated for OPC_agg_cpm.</code></pre>
+<pre><code>Ordering column names for Per_agg_cpm</code></pre>
+<pre><code>Performing MatrixEQTL analysis for 51..</code></pre>
+<pre><code>17031 of 17031 genes matched</code></pre>
+<pre><code>300104 of 300104 SNPs matched</code></pre>
+<pre><code> 5.55% done, 69 cis-eQTLs</code></pre>
+<pre><code>11.11% done, 135 cis-eQTLs</code></pre>
+<pre><code>16.66% done, 225 cis-eQTLs</code></pre>
+<pre><code>22.22% done, 318 cis-eQTLs</code></pre>
+<pre><code>27.77% done, 428 cis-eQTLs</code></pre>
+<pre><code>33.33% done, 536 cis-eQTLs</code></pre>
+<pre><code>38.88% done, 654 cis-eQTLs</code></pre>
+<pre><code>44.44% done, 829 cis-eQTLs</code></pre>
+<pre><code>50.00% done, 936 cis-eQTLs</code></pre>
+<pre><code>55.55% done, 1,026 cis-eQTLs</code></pre>
+<pre><code>61.11% done, 1,138 cis-eQTLs</code></pre>
+<pre><code>66.66% done, 1,228 cis-eQTLs</code></pre>
+<pre><code>72.22% done, 1,355 cis-eQTLs</code></pre>
+<pre><code>77.77% done, 1,434 cis-eQTLs</code></pre>
+<pre><code>83.33% done, 1,588 cis-eQTLs</code></pre>
+<pre><code>88.88% done, 1,695 cis-eQTLs</code></pre>
+<pre><code>94.44% done, 1,729 cis-eQTLs</code></pre>
+<pre><code>MatrixEQTL calculated for Per_agg_cpm.</code></pre>
+<pre><code>summarize_outputs=TRUE. Summarizing cis-eQTL outputs..</code></pre>
+<pre><code>Reading in MatrixEQTL outputs..</code></pre>
+<pre><code>Saving MatrixEQTL outputs as list object..</code></pre>
+<pre><code>Analysis complete!</code></pre>
+<pre><code>Runtime: 3.81558702389399</code></pre>
 <p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
 <br>
 <p>
@@ -720,20 +797,20 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] workflowr_1.7.0
+[1] SCGsuite_0.0.0.9000 workflowr_1.7.0    
 
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.9       highr_0.9        compiler_4.1.1   pillar_1.8.0    
- [5] bslib_0.3.1      later_1.2.0      git2r_0.29.0     jquerylib_0.1.4 
- [9] tools_4.1.1      getPass_0.2-2    digest_0.6.29    jsonlite_1.7.2  
-[13] evaluate_0.14    tibble_3.1.8     lifecycle_1.0.1  pkgconfig_2.0.3 
-[17] rlang_1.0.4      cli_3.3.0        rstudioapi_0.13  yaml_2.2.1      
-[21] xfun_0.33        fastmap_1.1.0    httr_1.4.2       stringr_1.4.0   
-[25] knitr_1.35       fs_1.5.1         vctrs_0.4.1      sass_0.4.0      
-[29] rprojroot_2.0.2  glue_1.6.2       R6_2.5.1         processx_3.5.2  
-[33] fansi_1.0.3      rmarkdown_2.17   callr_3.7.0      magrittr_2.0.3  
-[37] whisker_0.4      ps_1.6.0         promises_1.2.0.1 htmltools_0.5.2 
-[41] httpuv_1.6.3     utf8_1.2.2       stringi_1.7.6   </code></pre>
+ [1] Rcpp_1.0.9        compiler_4.1.1    pillar_1.8.0      bslib_0.3.1      
+ [5] later_1.2.0       git2r_0.29.0      jquerylib_0.1.4   tools_4.1.1      
+ [9] getPass_0.2-2     digest_0.6.29     jsonlite_1.7.2    evaluate_0.14    
+[13] tibble_3.1.8      lifecycle_1.0.1   pkgconfig_2.0.3   rlang_1.0.4      
+[17] cli_3.3.0         rstudioapi_0.13   yaml_2.2.1        xfun_0.33        
+[21] fastmap_1.1.0     httr_1.4.2        stringr_1.4.0     knitr_1.35       
+[25] fs_1.5.1          vctrs_0.4.1       sass_0.4.0        rprojroot_2.0.2  
+[29] data.table_1.14.2 glue_1.6.2        R6_2.5.1          processx_3.5.2   
+[33] fansi_1.0.3       rmarkdown_2.17    callr_3.7.0       magrittr_2.0.3   
+[37] whisker_0.4       ps_1.6.0          promises_1.2.0.1  htmltools_0.5.2  
+[41] httpuv_1.6.3      utf8_1.2.2        stringi_1.7.6     MatrixEQTL_2.3   </code></pre>
 </div>
 </div>
 
