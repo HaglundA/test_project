@@ -1,0 +1,51 @@
+---
+title: An R Markdown document converted from "/rds/general/user/ah3918/home/JupyterNotebooks/PROJECTS/MRC_project/MANUSCRIPT_OCT22/Untitled.ipynb"
+output: html_document
+---
+
+```{r}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = "/rds/general/user/ah3918/projects/single_cell_eqtl/live/MRC/MANUSCRIPT/COLOC_MR_RESULTS/")
+getwd()
+```
+
+
+```{r}
+coloc_list<-list.files(pattern="COLOC_results")
+trait_names<-gsub("2022-10-25_","",coloc_list)
+trait_names<-gsub("_COLOC_results.txt","",trait_names)
+coloc_list<-lapply(coloc_list,read.table)
+names(coloc_list)<-trait_names
+for(i in 1:length(coloc_list)){
+    trait<-names(coloc_list)[i]
+    coloc_list[[i]]$GWAS<-trait
+    }
+coloc_df<-do.call(rbind,coloc_list)
+
+##add genes and cell types
+split<-as.data.frame(do.call(rbind,strsplit(rownames(coloc_df),"[.]")))
+coloc_df$gene<-split$V3
+coloc_df$celltype<-split$V2
+
+##rename some of the cell types
+coloc_df$celltype<-gsub("_agg_cpm","",coloc_df$celltype)
+coloc_df$celltype<-sapply(coloc_df$celltype,function(x){
+    if(x=="Astro"){
+        x<-"Astrocytes"
+        }else if(x=="Oligo"){
+        x<-"ODC"
+        }else if(x=="Per"){
+        x<-"Pericytes"
+        }else if(x=="Endo"){
+        x<-"Endothelial"
+        }
+        return(x)})
+write.table(coloc_df,"2022-10-25_FULL_COLOC_RES.txt")
+```
+
+```{r}
+mr_list<-lapply(list.files(pattern="MR_res.rds"),readRDS)
+mr_df<-do.call(rbind,mr_list)
+write.table(mr_df,"2022-10-25_FULL_MR_RES.txt")
+```
+
